@@ -212,9 +212,9 @@ const courseData = {
     provider: "Maven Analytics",
     date: "June 30, 2026",
     logo: MAVEN_LOGO,
-    badge: "https://templates.images.credential.net/16134233795919402819072482808177.png",
+    badge: `${import.meta.env.BASE_URL}images/MySQLDatabaseAdministration.png`,
     certificates: [
-      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/186790163",
+      `${import.meta.env.BASE_URL}images/cert-mysql-database-administration.png`,
     ],
     summary:
       "A hands-on course on designing, optimizing, and managing relational databases with MySQL Workbench. The course moved from core database administration tasks like building schemas and tables to more advanced topics such as normalization, stored procedures, triggers, indexes, and user permissions, all practiced through real-world projects and case studies.",
@@ -234,9 +234,9 @@ const courseData = {
     provider: "Maven Analytics",
     date: "July 13, 2026",
     logo: MAVEN_LOGO,
-    badge: "https://templates.images.credential.net/1726184553586920353719450153605.png",
+    badge: `${import.meta.env.BASE_URL}images/AdvancedSQLQuerying.png`,
     certificates: [
-      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/188098402",
+      `${import.meta.env.BASE_URL}images/cert-advanced-sql-querying.png`,
     ],
     summary:
       "An advanced course that goes beyond the basic SQL clauses into the techniques analysts use to answer harder business questions. The course covered join types, subqueries, CTEs, and window functions, then functions for working with numbers, dates, text, and NULL values, and finished by applying everything to real-world analytics problems.",
@@ -317,9 +317,9 @@ const courseData = {
     provider: "Maven Analytics",
     date: "August 15, 2026",
     logo: MAVEN_LOGO,
-    badge: "https://templates.images.credential.net/16481667108643256170764492817884.png",
+    badge: `${import.meta.env.BASE_URL}images/PythonFoundationsForDataAnalysis.png`,
     certificates: [
-      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/191568204",
+      `${import.meta.env.BASE_URL}images/cert-python-foundations.png`,
     ],
     summary:
       "A hands-on, project-based course on the core building blocks of Python for data analysis. Playing the role of a Data Analytics Intern for Maven Ski Shop, I used Python in Jupyter Notebooks to track inventory, pricing, and sales performance, and finished with a final project that brought all the skills together.",
@@ -339,9 +339,9 @@ const courseData = {
     provider: "Maven Analytics",
     date: "September 16, 2026",
     logo: MAVEN_LOGO,
-    badge: "https://templates.images.credential.net/16576758038562449280893224627999.png",
+    badge: `${import.meta.env.BASE_URL}images/DataAnalysisWithPythonPandas.png`,
     certificates: [
-      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/194316999",
+      `${import.meta.env.BASE_URL}images/cert-python-pandas.png`,
     ],
     summary:
       "A hands-on, project-based course on NumPy and Pandas, two of the most popular Python packages for data analysis. Playing the role of a Data Analyst for Maven Mega Mart, a multinational retail and grocery chain, I analyzed products, pricing, and transactions to explore, clean, combine, and visualize real business data.",

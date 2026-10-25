@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SectionHeader from "./SectionHeader";
@@ -47,21 +48,65 @@ const courses = [
 ];
 
 
+// Filter groups shown above the grid. Each group lists the course "tool" tags it covers.
+const FILTERS = [
+  { label: "All", tools: null },
+  { label: "Excel", tools: ["Microsoft Excel"] },
+  { label: "Power BI & DAX", tools: ["Power BI", "Power Query / DAX"] },
+  { label: "SQL", tools: ["MySQL"] },
+  { label: "Python", tools: ["Python"] },
+  { label: "Data & AI", tools: ["Data Analytics", "AI / Ethics", "AI"] },
+];
+
+const matches = (filter, course) => !filter.tools || filter.tools.includes(course.tool);
+
 export default function CoursesSection() {
+  const [active, setActive] = useState("All");
+  const filter = FILTERS.find((f) => f.label === active) || FILTERS[0];
+  const visible = courses.filter((c) => matches(filter, c));
+
   return (
     <section id="courses" className="py-24 md:py-32 px-6 bg-secondary/40">
       <div className="max-w-6xl mx-auto">
         <SectionHeader index="07" label="Courses" title="Continuous learning" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {courses.map((course, i) => (
+        <div role="group" aria-label="Filter courses by topic" className="flex flex-wrap gap-2 mb-8">
+          {FILTERS.map((f) => {
+            const count = courses.filter((c) => matches(f, c)).length;
+            const isActive = f.label === active;
+            return (
+              <button
+                key={f.label}
+                type="button"
+                onClick={() => setActive(f.label)}
+                aria-pressed={isActive}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border font-body text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
+                  isActive
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
+                }`}
+              >
+                {f.label}
+                <span className={`text-xs tabular-nums ${isActive ? "text-primary-foreground/80" : "text-muted-foreground/70"}`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <AnimatePresence mode="popLayout">
+          {visible.map((course, i) => (
             <motion.div
-              key={course.title}
+              key={course.id}
+              layout
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.2 } }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="rounded-sm p-6 border border-border bg-card hover:border-primary/40 transition-all duration-300"
+              transition={{ duration: 0.5, delay: Math.min(i, 8) * 0.05 }}
+              className="rounded-sm p-6 border border-border bg-card hover:border-primary/40 transition-colors duration-300"
             >
               <Link to={`/course/${course.id}`} className="group block">
                 <div className="flex items-start justify-between mb-4">
@@ -88,7 +133,8 @@ export default function CoursesSection() {
               </Link>
             </motion.div>
           ))}
-        </div>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
