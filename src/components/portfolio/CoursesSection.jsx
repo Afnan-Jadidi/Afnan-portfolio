@@ -33,11 +33,15 @@ const courses = [
   { id: "microsoft-pl300-exam-prep", title: "Microsoft PL-300 Exam Prep", provider: "Maven Analytics", date: "Jan 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "Power BI" },
   // SQL
   { id: "mysql-data-analysis", title: "MySQL Data Analysis", provider: "Maven Analytics", date: "Jun 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "MySQL" },
+  { id: "mysql-database-administration", title: "MySQL Database Administration", provider: "Maven Analytics", date: "Jun 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "MySQL" },
+  { id: "advanced-sql-querying", title: "Advanced SQL Querying", provider: "Maven Analytics", date: "Jul 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "MySQL" },
   // Data & AI
   { id: "data-literacy-foundations", title: "Data Literacy Foundations", provider: "Maven Analytics", date: "Feb 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "Data Analytics" },
   { id: "data-ai-ethics", title: "Data & AI Ethics", provider: "Maven Analytics", date: "Apr 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "AI / Ethics" },
   { id: "introduction-to-ai", title: "Introduction to AI", provider: "KAUST", date: "Feb 2024", logo: KAUST_LOGO, tool: "AI" },
   // Python
+  { id: "python-foundations-for-data-analysis", title: "Python Foundations for Data Analysis", provider: "Maven Analytics", date: "Aug 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "Python" },
+  { id: "data-analysis-with-python-pandas", title: "Data Analysis with Python & Pandas", provider: "Maven Analytics", date: "Sep 2026", logo: MAVEN_LOGO, mavenLogo: true, tool: "Python" },
   { id: "python-basics", title: "Python Basics", provider: "University of Michigan", date: "Oct 2023", logo: UMICH_LOGO, tool: "Python" },
   { id: "python-classes-inheritance", title: "Python Classes and Inheritance", provider: "University of Michigan", date: "Oct 2023", logo: UMICH_LOGO, tool: "Python" },
 ];

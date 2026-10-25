@@ -207,6 +207,49 @@ const courseData = {
     ],
     skills: ["MySQL", "SQL", "Data Querying", "Table Joins", "Aggregation Functions", "Relational Databases", "MySQL Workbench", "Data Analysis"],
   },
+  "mysql-database-administration": {
+    title: "MySQL Database Administration",
+    provider: "Maven Analytics",
+    date: "June 30, 2026",
+    logo: MAVEN_LOGO,
+    badge: "https://templates.images.credential.net/16134233795919402819072482808177.png",
+    certificates: [
+      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/186790163",
+    ],
+    summary:
+      "A hands-on course on designing, optimizing, and managing relational databases with MySQL Workbench. The course moved from core database administration tasks like building schemas and tables to more advanced topics such as normalization, stored procedures, triggers, indexes, and user permissions, all practiced through real-world projects and case studies.",
+    details: [
+      "Installing MySQL Community Server and MySQL Workbench",
+      "Creating and editing schemas and tables, and inserting, updating, and deleting records",
+      "Designing efficient databases using normalization, primary and foreign keys, and table relationships",
+      "Writing stored procedures to automate repeated tasks",
+      "Building triggers to enforce rules and keep data consistent",
+      "Using indexes to speed up queries",
+      "Managing user accounts, roles, and permissions",
+    ],
+    skills: ["MySQL", "SQL", "Database Administration", "Database Design", "Normalization", "Stored Procedures", "Triggers & Indexes", "MySQL Workbench"],
+  },
+  "advanced-sql-querying": {
+    title: "Advanced SQL Querying",
+    provider: "Maven Analytics",
+    date: "July 13, 2026",
+    logo: MAVEN_LOGO,
+    badge: "https://templates.images.credential.net/1726184553586920353719450153605.png",
+    certificates: [
+      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/188098402",
+    ],
+    summary:
+      "An advanced course that goes beyond the basic SQL clauses into the techniques analysts use to answer harder business questions. The course covered join types, subqueries, CTEs, and window functions, then functions for working with numbers, dates, text, and NULL values, and finished by applying everything to real-world analytics problems.",
+    details: [
+      "Choosing the right JOIN type, including self joins and cross joins",
+      "Writing subqueries and Common Table Expressions (CTEs) to break down complex logic",
+      "Using window functions for ranking, running totals, and comparing rows",
+      "Working with numeric, datetime, string, and NULL functions",
+      "Pivoting data with CASE statements",
+      "Solving common business and data analytics problems with advanced queries",
+    ],
+    skills: ["SQL", "MySQL", "Advanced Joins", "Subqueries", "CTEs", "Window Functions", "Data Manipulation", "Data Analysis"],
+  },
   "data-literacy-foundations": {
     title: "Data Literacy Foundations",
     provider: "Maven Analytics",
@@ -268,6 +311,51 @@ const courseData = {
       "Ethical considerations in AI",
     ],
     skills: ["Artificial Intelligence", "Machine Learning", "Neural Networks", "Deep Learning", "AI Ethics"],
+  },
+  "python-foundations-for-data-analysis": {
+    title: "Python Foundations for Data Analysis",
+    provider: "Maven Analytics",
+    date: "August 15, 2026",
+    logo: MAVEN_LOGO,
+    badge: "https://templates.images.credential.net/16481667108643256170764492817884.png",
+    certificates: [
+      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/191568204",
+    ],
+    summary:
+      "A hands-on, project-based course on the core building blocks of Python for data analysis. Playing the role of a Data Analytics Intern for Maven Ski Shop, I used Python in Jupyter Notebooks to track inventory, pricing, and sales performance, and finished with a final project that brought all the skills together.",
+    details: [
+      "Setting up Jupyter Notebooks and working with Python's core data types",
+      "Using variables and numeric and string operators",
+      "Writing conditional logic with if, elif, and else",
+      "Looping through iterables and indices with for and while loops",
+      "Storing and extracting values in lists, tuples, dictionaries, and sets",
+      "Writing reusable functions",
+      "Importing and editing Excel workbook data with the openpyxl package",
+    ],
+    skills: ["Python", "Jupyter Notebooks", "Data Types", "Conditional Logic", "Loops", "Functions", "openpyxl", "Data Prep"],
+  },
+  "data-analysis-with-python-pandas": {
+    title: "Data Analysis with Python & Pandas",
+    provider: "Maven Analytics",
+    date: "September 16, 2026",
+    logo: MAVEN_LOGO,
+    badge: "https://templates.images.credential.net/16576758038562449280893224627999.png",
+    certificates: [
+      "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/194316999",
+    ],
+    summary:
+      "A hands-on, project-based course on NumPy and Pandas, two of the most popular Python packages for data analysis. Playing the role of a Data Analyst for Maven Mega Mart, a multinational retail and grocery chain, I analyzed products, pricing, and transactions to explore, clean, combine, and visualize real business data.",
+    details: [
+      "NumPy arrays, array properties, vectorization, and broadcasting",
+      "Indexing, slicing, filtering, and sorting data",
+      "Exploring and transforming Pandas Series and DataFrames",
+      "Aggregating and grouping data to summarize results",
+      "Plotting DataFrames with charts and graphs",
+      "Working with time-series data",
+      "Importing and exporting different file types",
+      "Combining DataFrames with joins and merges",
+    ],
+    skills: ["Python", "Pandas", "NumPy", "Data Analysis", "Data Cleaning", "Data Aggregation", "Time Series", "Data Visualization"],
   },
   "python-basics": {
     title: "Python Basics",
